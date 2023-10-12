@@ -1,3 +1,5 @@
 env/
 */__pycache__/
+dist/
+Proyecto_python2.egg-info
 
