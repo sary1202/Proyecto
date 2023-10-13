@@ -1,8 +1,8 @@
 import unittest
 import os,PIL
 
-from src.images import showImageFromURL, downloadImageFromUrl,grayScaleImage
-from src.myemail import sendQuickMail,sendAttachEmail
+from src.Proyecto_python2.images import showImageFromURL, downloadImageFromUrl,grayScaleImage
+from src.Proyecto_python2.myemail import sendQuickMail,sendAttachEmail
 
 class TestProyecto(unittest.TestCase):
 
