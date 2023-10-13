@@ -32,8 +32,14 @@ Esta biblioteca tiene dos modulos:
 
 1. Images 
 
+    *  showImageFromURL(url)
+    * downloadImageFromUrl(url, path)
+    * grayScaleImage(path:str)
+
 2. Myemail 
 
+    * sendQuickMail(subject, message, destination)
+    * sendAttachEmail(subject, message, destination, path)
 
 ***********
 Referencias
