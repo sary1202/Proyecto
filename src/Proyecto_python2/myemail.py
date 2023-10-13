@@ -1,22 +1,42 @@
 
-####-----------------------------------------------
-
 import smtplib, ssl
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
+from mimetypes import MimeTypes
+from email.mime.base import MIMEBase
+from email import encoders
+
 
 def sendQuickMail(subject:str, message:str, destination:str):
     """
     Envía un correo electrónico rápido al destino indicado.
-    La función debe preguntar cual es el correo electrónico con el que se enviará así
-    como su contraseña
-    Se utilizará el puerto 587 y se utilizará TLS
-    Se utilizará el servidor de correo smtp.gmail.com
+
+    Arguments:
+    ^^^^^^^^^^
+    :subject argumento 1: Sirve para indicar el asunto del correo
+
+    :type argumento 1: str
+
+    :message argumento 2: Sirve para indicar el mensaje del correo
+
+    :type argumento 2: str
+
+    :destination argumento 3: Sirve para indicar la dirección a la que se va a enviar el correo 
+    
+    :type argumento 3: str
+
+    Uso
+    ^^^
+
+    .. code-block:: python
+    
+        sendQuickMail(subject, message, destination)
+        
+    
     """
 
     context = ssl.create_default_context()
 
-    # Se genera mensaje preferible hacerlo antes del wtih
     mensaje = MIMEMultipart("alternative")
     mensaje["Subject"] = subject
 #   mensaje["From"] = input("ingrese la cuenta con la que va a enviar el correo")
@@ -43,32 +63,35 @@ def sendQuickMail(subject:str, message:str, destination:str):
         
 
 
-
-
-
-
-
-
-
-# 2-----------------------------------------------------
-
-import smtplib, ssl
-from mimetypes import MimeTypes
-
-from email.mime.text import MIMEText
-from email.mime.multipart import MIMEMultipart
-from email.mime.base import MIMEBase
-from email import encoders
-
-
-
 def sendAttachEmail(subject:str, message:str, destination:str, path:str):
     """
-    Envía un correo electrónico rápido al destino indicado.
-    La función debe preguntar cual es el correo electrónico con el que se enviará así
-    como su contraseña
-    Se utilizará el puerto 587 y se utilizará TLS
-    Se utilizará el servidor de correo smtp.gmail.com
+    Envía un correo electrónico con un archivo adjunto a la dirección indicada.
+
+    Arguments:
+    ^^^^^^^^^^
+    :subject argumento 1: Sirve para indicar el asunto del correo
+
+    :type argumento 1: str
+
+    :message argumento 2: Sirve para indicar el mensaje del correo
+
+    :type argumento 2: str
+
+    :destination argumento 3: Sirve para indicar la dirección a la que se va a enviar el correo
+
+    :type argumento 3: str
+
+    :path argumento 4: Sirve para indicar la ruta del archivo que desea adjuntar al correo
+    
+    :type argumento 4: str  
+
+    Uso
+    ^^^
+
+    .. code-block:: python
+    
+        sendAttachEmail(subject, message, destination, path)
+
     """
 
     context = ssl.create_default_context()

@@ -4,6 +4,9 @@ from src.Proyecto_python2.images import showImageFromURL, downloadImageFromUrl,g
 from src.Proyecto_python2.myemail import sendQuickMail,sendAttachEmail
 
 def main(args):
+    """
+    Esta función es para hacer pruebas de la biblioteca
+    """
 
     print("función: showImageFromURL")
     url = input("Ingrese ruta: ")

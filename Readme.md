@@ -7,7 +7,7 @@ Para instalar el paquete es necesario crear un entorno virtual:
 ```
 python -m venv env
 env\Scripts\Activate
-pip install -r requirements
+pip install -r python venv venv 
 ```
 
 Para poder utilizarlo solo debe importar las funciones al inicio del módulo:

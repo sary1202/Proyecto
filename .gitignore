@@ -2,4 +2,6 @@ env/
 */__pycache__/
 dist/
 Proyecto_python2.egg-info
-
+docs1/build/*
+docs/
+*.pyc
